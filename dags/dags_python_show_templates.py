@@ -10,7 +10,7 @@ with DAG(
     catchup=True,
 ) as dag:
     
-    @task(task_id='pytonh_task')
+    @task(task_id='python_task')
     def show_templetes(**kwargs):
         from pprint import pprint
         pprint(kwargs)
