@@ -14,7 +14,7 @@ with DAG(
     
     put_file = SFTPOperator(
         task_id="put_file",
-        ssh_hook = sftp_hook,
+        sftp_hook = sftp_hook,
         local_filepath="/opt/airflow/config/10080.py",
         remote_filepath="10080.py",
         operation="get",
