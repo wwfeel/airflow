@@ -3,7 +3,7 @@ import pendulum
 from airflow.operators.python import PythonOperator
 from airflow.providers.sftp.operators.sftp import SFTPHook, SFTPOperator
 
-sftp_hook = SFTPHook(ssh_conn_id=None, username="SYP", remote_host="154.53.56.101", cmd_timeout=None, look_for_keys=False)
+sftp_hook = SFTPHook(ssh_conn_id=None, username="SYP", remote_host="154.53.56.101", cmd_timeout=None, key_file=None)
 
 with DAG(
         dag_id='hynix_pluto',
